@@ -18,6 +18,11 @@ output:
 ``````{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+## Tarea 1 sobre R:
+### Ejercicio 1: 
+#### Crear un identificador de nombre "ciudad" y asigne como valor el nombre de alguna ciudad
+
 ```{r Ejercicio1}
 ##Ejercicio 1
 
@@ -29,17 +34,22 @@ ciudad <- "Loja"
 print(ciudad)
 
 ```
-##
+### Ejercicio 2: 
+#### Crear un identificador de nombre "pais_andes" y asigne como valor los nombres de los países por donde cruza la cordillera de Los Andes
 
 ```{r Ejercicio2}
+
 ##Ejercicio 2
 # Crear un identificador de nombre "pais_andes" y asigne como valor los nombres 
 #de los países por donde cruza la cordillera de Los Andes
 
-pais_andes <-c( Argentina, Bolivia, Chile, Colombia, Ecuador, Perú, Venezuela )
+pais_andes <-c("Argentina", "Bolivia", "Chile", "Colombia", "Ecuador", "Perú", "Venezuela")
 
 print(pais_andes)
 ```
+### Ejercicio 3:  
+#### Crear un dataframe con 12 eventos (files) y 5 variables (columnas), cada columna debe tener diferentes tipos de datos (entero, decimal, caracter, logico)
+
 ```{r Ejercicio3}
 
 ##Ejercicio3
@@ -47,12 +57,28 @@ print(pais_andes)
 # cada columna debe tener diferentes tipos de datos (entero, decimal, 
 # caracter, logico)
 
-Trabajadores_Fybeca = data.frame(num_Trabajadores= paste0("Trb", 1:12), Nombre = c("Sayra", "Gina", "Wilmer", "lizet", "Maria", "Maria", "Susana", "Anita", "luz", "Andres", "Ernesto", "Lola"), Apellido = c("Valarezo", "Martinez", "Sauca", "Chamba", "Auquilla", "Diaz", "Rhon", "Castro", "Ponton", "Feijo", "", "Macanchi"), Salario = sample(400:1000, 12, replace = TRUE), Num_Dias_vacaciones =sample(10:30, 12, replace = TRUE) )
-```
-```{r Ejercicio4}
-##Ejercicio4
+Trabajadores_Fybeca = data.frame(Nombre = c("Sayra", "Gina", "Wilmer", "lizet", "Maria", "Maria", "Susana", "Anita", "luz", "Andres", "Ernesto", "Lola"), Apellido = c("Valarezo", "Martinez", "Sauca", "Chamba", "Auquilla", "Diaz", "Rhon", "Castro", "Ponton", "Feijo", "Valdivieso", "Macanchi"), ID = c("1105790867", "1150070867", "110246837", "1105748692", "1720284742", "1720264815", "1720274742", "1102468369", "1102448259", "1103541028", "1105682546", "1150070834"), Salario = sample(400.05:1100.13, 12, replace = TRUE), Hijos =sample(0:5, 12, replace = TRUE) )
 
-# Cargue el dataset "DNase" e identifique su estructura. Extraiga (subset) 
-# los datos que cumplan con las condiciones de: 
-#   1. "conc" (concentracion) entre 0.1 y 0.2
-#   2. "Run" diferente a 2, "conc" mayor a 0.2 y "density" menor o igual a 1.0
+Trabajadores_Fybeca
+```
+### Ejecicio 4: 
+#### Cargue el dataset "DNase" e identifique su estructura. Extraiga (subset) los datos que cumplan con las condiciones de:
+
+#### Ejecicio 4.1: "conc" (concentracion) entre 0.1 y 0.2
+
+```{r Ejercicio4.1}
+# Ejercicio 4.1: Selección del dataset "DNase"
+?DNase
+print(head(DNase, 4))
+concentracion = subset(DNase, conc >= 0.1 & conc <= 0.2)
+print(concentracion)
+```
+#### Ejercicio 4.2: "Run" diferente a 2, "conc" mayor a 0.2 y "density" menor o igual a 1.0
+
+
+```{r Ejercicio4.2}
+# Ejercicio 4.2: Selección del dataset "DNase"
+?DNase
+concentracion2 = subset(DNase, Run != 2 & conc > 0.2 & density <= 1.0)
+print(concentracion2)
+```
