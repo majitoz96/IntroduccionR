@@ -30,9 +30,9 @@ print(pais_andes)
 # cada columna debe tener diferentes tipos de datos (entero, decimal, 
 # caracter, logico)
 
-Trabajadores_Fybeca = data.frame(num_Trabajadores= paste0)
+Trabajadores_Fybeca = data.frame(num_Trabajadores= paste0("Trb", 1:12), Nombre = c("Sayra", "Gina", "Wilmer", "lizet", "Maria", "Maria", "Susana", "Anita", "luz", "Andres", "Ernesto", "Lola"), Apellido = c("Valarezo", "Martinez", "Sauca", "Chamba", "Auquilla", "Diaz", "Rhon", "Castro", "Ponton", "Feijo", "", "Macanchi"), Salario = sample(400:1000, 12, replace = TRUE), Num_Dias_vacaciones =sample(10:30, 12, replace = TRUE) )
 
-
+##Ejercicio4
 
 # Cargue el dataset "DNase" e identifique su estructura. Extraiga (subset) 
 # los datos que cumplan con las condiciones de: 
