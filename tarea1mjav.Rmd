@@ -2,9 +2,23 @@
 title: "Tarea 1"
 author: "Maria Jose Auquilla"
 date: "26/2/2022"
-output: html_document
+output:
+    html_document:
+    self_contained: true
+    fig_height: 6
+    fight_width: 8
+    theme: journal
+    highlight: zenburn
+    toc: yes
+    toc_depht: 4
+    toc_float:
+      collapsed: no
+      smooth_scroll: yes
 ---
+``````{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
 ```
+```{r Ejercicio1}
 ##Ejercicio 1
 
 # Crear un identificador de nombre "ciudad" y asigne 
@@ -15,23 +29,27 @@ ciudad <- "Loja"
 print(ciudad)
 
 ```
-```
+##
+
+```{r Ejercicio2}
 ##Ejercicio 2
 # Crear un identificador de nombre "pais_andes" y asigne como valor los nombres 
 #de los países por donde cruza la cordillera de Los Andes
 
-pais_andes <-c( Argentina, Bolivia, Chile, Colombia, Ecuador, Perú y Venezuela )
+pais_andes <-c( Argentina, Bolivia, Chile, Colombia, Ecuador, Perú, Venezuela )
 
 print(pais_andes)
 ```
-```
+```{r Ejercicio3}
+
 ##Ejercicio3
 # Crear un dataframe con 12 eventos (files) y 5 variables (columnas), 
 # cada columna debe tener diferentes tipos de datos (entero, decimal, 
 # caracter, logico)
 
 Trabajadores_Fybeca = data.frame(num_Trabajadores= paste0("Trb", 1:12), Nombre = c("Sayra", "Gina", "Wilmer", "lizet", "Maria", "Maria", "Susana", "Anita", "luz", "Andres", "Ernesto", "Lola"), Apellido = c("Valarezo", "Martinez", "Sauca", "Chamba", "Auquilla", "Diaz", "Rhon", "Castro", "Ponton", "Feijo", "", "Macanchi"), Salario = sample(400:1000, 12, replace = TRUE), Num_Dias_vacaciones =sample(10:30, 12, replace = TRUE) )
-
+```
+```{r Ejercicio4}
 ##Ejercicio4
 
 # Cargue el dataset "DNase" e identifique su estructura. Extraiga (subset) 
