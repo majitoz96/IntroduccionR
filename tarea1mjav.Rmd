@@ -1,0 +1,40 @@
+---
+title: "Tarea 1"
+author: "Maria Jose Auquilla"
+date: "26/2/2022"
+output: html_document
+---
+```
+##Ejercicio 1
+
+# Crear un identificador de nombre "ciudad" y asigne 
+# como valor el nombre de alguna ciudad
+
+ciudad <- "Loja"
+
+print(ciudad)
+
+```
+```
+##Ejercicio 2
+# Crear un identificador de nombre "pais_andes" y asigne como valor los nombres 
+#de los países por donde cruza la cordillera de Los Andes
+
+pais_andes <-c( Argentina, Bolivia, Chile, Colombia, Ecuador, Perú y Venezuela )
+
+print(pais_andes)
+```
+```
+##Ejercicio3
+# Crear un dataframe con 12 eventos (files) y 5 variables (columnas), 
+# cada columna debe tener diferentes tipos de datos (entero, decimal, 
+# caracter, logico)
+
+Trabajadores_Fybeca = data.frame(num_Trabajadores= paste0)
+
+
+
+# Cargue el dataset "DNase" e identifique su estructura. Extraiga (subset) 
+# los datos que cumplan con las condiciones de: 
+#   1. "conc" (concentracion) entre 0.1 y 0.2
+#   2. "Run" diferente a 2, "conc" mayor a 0.2 y "density" menor o igual a 1.0
